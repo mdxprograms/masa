@@ -21,8 +21,6 @@ let TasksModel = {
     TasksModel.tasks = TasksModel.tasks.filter(t => t.id !== id);
   },
   save(task) {
-    const idx = TasksModel.tasks.findIndex(t => t.id === task.id);
-
     if (TasksModel.getTask(task.id)) {
       _.chain(TasksModel.tasks)
         .find({ id: task.id })
